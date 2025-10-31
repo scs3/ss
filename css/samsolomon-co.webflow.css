@@ -47,7 +47,7 @@
 }
 
 :root {
-  --bg--default: #f2f2f0;
+  --bg--default: #eaede6;
   --content--default: black;
   --blue: #4730f2;
   --content--brand: #0063f7;
@@ -61,6 +61,7 @@
   --none: 0px;
   --size--24: 24px;
   --size--40: 40px;
+  --border--brand-subtle: #7caefa;
   --white: white;
   --light-grey: #cccbc7;
   --light-ink: #b3aea4;
@@ -83,7 +84,7 @@
 body {
   background-color: var(--bg--default);
   color: var(--content--default);
-  font-family: neue-haas-unica, sans-serif;
+  font-family: neue-haas-unica;
   font-size: 18px;
   line-height: 22px;
 }
@@ -450,11 +451,13 @@ a.w--current {
   color: var(--content--brand);
   flex-direction: column;
   align-items: center;
+  font-family: Geist, sans-serif;
+  font-size: 16px;
   display: flex;
 }
 
 .button {
-  padding: 8px var(--size--16) 10px;
+  padding: 8px var(--size--16);
   grid-column-gap: var(--size--8);
   grid-row-gap: var(--size--8);
   border: 1px solid var(--border--brand);
@@ -516,11 +519,16 @@ a.w--current {
   display: grid;
 }
 
+.content--12-col.content--availability {
+  position: absolute;
+  inset: auto 0% 0%;
+}
+
 .block--border-top {
   padding-top: var(--size--16);
   grid-column-gap: var(--size--16);
   grid-row-gap: var(--size--16);
-  border-top: 1px dashed var(--border--brand);
+  border-top: 1px solid var(--border--brand-subtle);
   flex-direction: column;
   align-items: flex-start;
   display: flex;
@@ -534,10 +542,10 @@ a.w--current {
 }
 
 .badge {
-  border: 1px solid var(--border--brand);
+  border: 1px solid var(--border--brand-subtle);
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-bottom: 4px;
+  padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
   display: flex;
@@ -558,8 +566,13 @@ a.w--current {
 
 .bio__link {
   color: var(--content--brand);
-  line-height: 10px;
+  text-underline-offset: 3px;
   text-decoration: underline;
+  -webkit-text-decoration-color: var(--border--brand-subtle);
+  text-decoration-color: var(--border--brand-subtle);
+  -webkit-text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
+  line-height: 10px;
 }
 
 .bio__link:hover {
