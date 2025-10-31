@@ -677,6 +677,10 @@ a.w--current {
   .portrait {
     display: none;
   }
+
+  .content--12-col.content--availability {
+    position: static;
+  }
 }
 
 @media screen and (max-width: 479px) {
