@@ -599,8 +599,10 @@ a.w--current {
 }
 
 .availability__status {
-  background-color: var(--bg--brand-hover);
-  color: var(--border--brand-hover);
+  color: var(--content--brand);
+  text-underline-offset: 2px;
+  -webkit-text-decoration: underline dashed;
+  text-decoration: underline dashed;
 }
 
 .div-block-2 {
