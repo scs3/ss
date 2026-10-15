@@ -63,11 +63,11 @@
   }
   .masthead h1 { margin: 0; font: var(--text-default); }
 
-  /* Heading: each word fades in, 1s, staggered 200ms */
+  /* Heading: each word fades in, 750ms, staggered 150ms */
   .title .word {
     display: inline-block;
-    animation: word-fade 1000ms ease-out both;
-    animation-delay: calc(var(--i) * 200ms);
+    animation: word-fade 750ms ease-out both;
+    animation-delay: calc(var(--i) * 150ms);
   }
   @keyframes word-fade {
     from { opacity: 0; }
